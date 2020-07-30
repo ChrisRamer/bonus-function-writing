@@ -21,6 +21,11 @@ $(document).ready(function() {
 		return sentence.slice(1, sentence.length - 1) + charFirst + charLast;
 	}
 
+	const addCharToFront = function(sentence) {
+		const midChar = sentence.charAt(sentence.length / 2);
+		return midChar + sentence;
+	}
+
 	baseSentence = capitalizeChars(baseSentence);
 	alert("First & last letters were capitalized!\n" + baseSentence);
 
@@ -29,5 +34,8 @@ $(document).ready(function() {
 
 	baseSentence = addCharsToEnd(baseSentence);
 	alert("First & last letters were put at end!\n" + baseSentence);
+
+	baseSentence = addCharToFront(baseSentence);
+	alert("Mid character was put to front!\n" + baseSentence);
 
 });

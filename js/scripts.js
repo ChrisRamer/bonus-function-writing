@@ -15,10 +15,19 @@ $(document).ready(function() {
 		return charFirst + sentence.slice(1, sentence.length - 1) + charLast;
 	}
 
+	const addCharsToEnd = function(sentence) {
+		const charFirst = sentence.charAt(0);
+		const charLast = sentence.charAt(sentence.length - 1);
+		return sentence.slice(1, sentence.length - 1) + charFirst + charLast;
+	}
+
 	baseSentence = capitalizeChars(baseSentence);
 	alert("First & last letters were capitalized!\n" + baseSentence);
 
 	baseSentence = reverseChars(baseSentence);
 	alert("First & last letters were reversed!\n" + baseSentence);
+
+	baseSentence = addCharsToEnd(baseSentence);
+	alert("First & last letters were put at end!\n" + baseSentence);
 
 });

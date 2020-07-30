@@ -26,6 +26,12 @@ $(document).ready(function() {
 		return midChar + sentence;
 	}
 
+	const reverseSentence = function(sentence) {
+		const chars = sentence.split("");
+		const reversedChars = chars.reverse();
+		return reversedChars.join("");
+	}
+
 	baseSentence = capitalizeChars(baseSentence);
 	alert("First & last letters were capitalized!\n" + baseSentence);
 
@@ -37,5 +43,8 @@ $(document).ready(function() {
 
 	baseSentence = addCharToFront(baseSentence);
 	alert("Mid character was put to front!\n" + baseSentence);
+
+	baseSentence = reverseSentence(baseSentence);
+	alert("Reversed the full sentence!\n" + baseSentence);
 
 });
